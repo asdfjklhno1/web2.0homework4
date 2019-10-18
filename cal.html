@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="cal.js" type="text/javascript"></script>
+    <link href="cal.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="cal.jpg" />
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="position">
+        <div class="view">
+            <input type="text" id="view" value="" disabled>
+        </div>
+        <div class="first Line">
+            <button class="num" id="7" onclick="add7()">7</button>
+            <button class="num" id="8" onclick="add8()">8</button>
+            <button class="num" id="9" onclick="add9()">9</button>
+            <button class="opera" id="/" onclick="addDivide()">/</button>
+        </div>
+        <div class="second Line">
+            <button class="num" id="4" onclick="add4()">4</button>
+            <button class="num" id="5" onclick="add5()">5</button>
+            <button class="num" id="6" onclick="add6()">6</button>
+            <button class="opera" id="*" onclick="addTimes()">*</button>
+        </div>
+        <div class="third Line">
+            <button class="num" id="1" onclick="add1()">1</button>
+            <button class="num" id="2" onclick="add2()">2</button>
+            <button class="num" id="3" onclick="add3()">3</button>
+            <button class="opera" id="-" onclick="addMinus()">-</button>
+        </div>
+        <div class="forth Line">
+            <button class="num" id="0" onclick="add0()">0</button>
+            <button class="num" id="." onclick="addPoint()">.</button>
+            <button class="func" id="back" onclick="back()">←</button>
+            <button class="opera" id="+" onclick="addPlus()">+</button>
+        </div>
+        <div class="fifth Line">
+            <button class="opera" id="(" onclick="addLeftPare()">(</button>
+            <button class="opera" id=")" onclick="addRightPare()">)</button>
+            <button class="func" id="clear" onclick="clearAll()">CE</button>
+            <button class="func" id="result" onclick="getResult()">=</button>
+        </div>
+    </div>
+</body>
+
+</html>
