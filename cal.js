@@ -1,5 +1,6 @@
 var calstr = '';
 function add1() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '1';
     else{
         calstr += '1';
@@ -8,6 +9,7 @@ function add1() {
     document.getElementById("view").value = calstr;
 }
 function add2() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '2';
     else{
         calstr += '2';
@@ -16,6 +18,7 @@ function add2() {
     document.getElementById("view").value = calstr;
 }
 function add3() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '3';
     else{
         calstr += '3';
@@ -24,6 +27,7 @@ function add3() {
     document.getElementById("view").value = calstr;
 }
 function add4() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '4';
     else{
         calstr += '4';
@@ -32,6 +36,7 @@ function add4() {
     document.getElementById("view").value = calstr;
 }
 function add5() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '5';
     else{
         calstr += '5';
@@ -40,6 +45,7 @@ function add5() {
     document.getElementById("view").value = calstr;
 }
 function add6() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '6';
     else{
         calstr += '6';
@@ -48,6 +54,7 @@ function add6() {
     document.getElementById("view").value = calstr;
 }
 function add7() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '7';
     else{
         calstr += '7';
@@ -56,6 +63,7 @@ function add7() {
     document.getElementById("view").value = calstr;
 }
 function add8() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '8';
     else{
         calstr += '8';
@@ -64,6 +72,7 @@ function add8() {
     document.getElementById("view").value = calstr;
 }
 function add9() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '9';
     else{
         calstr += '9';
@@ -72,6 +81,7 @@ function add9() {
     document.getElementById("view").value = calstr;
 }
 function add0() {
+    ifNumBeginWithZero();
     if(calstr=='') calstr = '0';
     else{
         calstr += '0';
@@ -206,4 +216,13 @@ function ifOverflow() {
         calstr = calstr.substring(0, 22);
         alert("超出最大算式长度");
     }       
+}
+
+function ifNumBeginWithZero() {
+    if(calstr.length==1 && calstr.charAt(calstr.length-1)=='0'){
+        calstr = '';
+    }
+    else if(calstr.length>1 && calstr.charAt(calstr.length-1)=='0' && (isNaN(calstr.charAt(calstr.length-2)) && calstr.charAt(calstr.length-2)!='.')) {
+        calstr = calstr.substring(0, calstr.length-1);
+    }
 }
